@@ -1,89 +1,89 @@
-# QuickCmd - Command Line Shortcut Tool  
+# QuickCmd - Command Line Shortcut Tool
 
-## Overview  
+## Overview
 
-QuickCmd is a simple command-line shortcut tool that allows you to create short aliases for frequently used commands, improving productivity. Key features include:  
+QuickCmd is a simple command-line shortcut utility that allows you to create short aliases for frequently used commands, boosting your productivity. Key features include:
 
-1. **Add Shortcut Commands**: Create memorable aliases for long commands  
-2. **List All Commands**: View all saved shortcuts  
-3. **Execute Commands**: Quickly run saved commands using aliases  
+1. **Add shortcuts**: Create memorable aliases for long commands
+2. **List all commands**: View all saved shortcuts
+3. **Execute commands**: Run saved commands using their aliases
 
-## Installation & Usage  
+## Installation & Usage
 
-### Requirements  
-- Python 3.x  
-- `click` library (install via pip)  
+### Requirements
+- Python 3.x
+- click library (install via pip)
 
-### Installation Steps  
+### Installation Steps
 
-1. Save the script as `quickcmd.py`  
-2. Make it executable:  
-   ```bash  
-   chmod +x quickcmd.py  
-   ```  
-3. (Optional) Move to a PATH directory (e.g., `/usr/local/bin`):  
-   ```bash  
-   sudo mv quickcmd.py /usr/local/bin/qc  
-   ```  
+1. Save the script as `quickcmd.py`
+2. Make it executable:
+   ```bash
+   chmod +x quickcmd.py
+   ```
+3. Create a symlink:
+   ```bash
+   sudo ln -s $(pwd)/quickcmd.py /usr/local/bin/qc
+   ```
 
-### Usage  
+### Usage
 
-#### 1. Add a Shortcut Command  
-```bash  
-qc add <alias> "<full command>"  
-```  
-Examples:  
-```bash  
-qc add gs "git status"  
-qc add update "sudo apt update && sudo apt upgrade -y"  
-```  
+#### 1. Add a shortcut
+```bash
+qc add <alias> "<full command>"
+```
+Examples:
+```bash
+qc add gs "git status"
+qc add update "sudo apt update && sudo apt upgrade -y"
+```
 
-#### 2. List All Shortcuts  
-```bash  
-qc list  
-```  
+#### 2. List all shortcuts
+```bash
+qc list
+```
 
-#### 3. Run a Shortcut Command  
-```bash  
-qc run <alias>  
-```  
-Example:  
-```bash  
-qc run gs  
-```  
+#### 3. Execute a shortcut
+```bash
+qc run <alias>
+```
+Example:
+```bash
+qc run gs
+```
 
-#### 4. Get Help  
-```bash  
-qc --help  
-```  
+#### 4. Get help
+```bash
+qc --help
+```
 
-## Configuration  
+## Configuration
 
-All shortcuts are stored in `~/.quickcmd_commands.json`. You can manually edit this file for advanced configurations.  
+All shortcuts are stored in `~/.quickcmd_commands.json` in your home directory. You can directly edit this file for advanced configuration.
 
-## Example Workflow  
+## Example Workflow
 
-```bash  
-# Add common commands  
-qc add push "git push origin main"  
-qc add pull "git pull origin main"  
+```bash
+# Add common commands
+qc add push "git push origin main"
+qc add pull "git pull origin main"
 
-# View saved commands  
-qc list  
-# Output:  
-# push: git push origin main  
-# pull: git pull origin main  
+# View saved commands
+qc list
+# Output:
+# push: git push origin main
+# pull: git pull origin main
 
-# Execute a shortcut  
-qc run push  
-```  
+# Use shortcuts
+qc run push
+```
 
-## Notes  
+## Notes
 
-- Use quotes for commands containing special characters  
-- Commands execute in the current shell environment  
-- Aliases cannot contain spaces  
+- Wrap commands containing special characters in quotes
+- Commands execute in the current shell environment
+- Aliases cannot contain spaces
 
-## License  
+## License
 
 This project is open-source under the MIT License.

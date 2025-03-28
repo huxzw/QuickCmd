@@ -21,9 +21,9 @@ QuickCmd 是一个简单的命令行快捷工具，允许你为常用命令创�
    ```bash
    chmod +x quickcmd.py
    ```
-3. （可选）将脚本移动到PATH目录，如`/usr/local/bin`：
+3. 链接脚本
    ```bash
-   sudo mv quickcmd.py /usr/local/bin/quickcmd
+   sudo ln -s $(pwd)/quickcmd.py /usr/local/bin/qc
    ```
 
 ### 使用方式
@@ -87,4 +87,3 @@ qc run push
 ## 许可证
 
 本项目采用MIT许可证开源。
-给出对应英文版的
